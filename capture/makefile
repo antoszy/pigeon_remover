@@ -12,3 +12,5 @@ clean:
 	rm capture.o capture 
 
 
+install:
+	cp capture /usr/local/bin
