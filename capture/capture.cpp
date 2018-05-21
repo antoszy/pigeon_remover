@@ -29,7 +29,7 @@ int main() {
     int FPS = 1;
 
     // Directory name
-    string set_dir = "Test2";
+    string set_dir = "Test";
     // Image base name
     string name_type = "test";
 
@@ -61,7 +61,7 @@ int main() {
 
             cout << "Now saving: " << string_num << endl;
 
-            string save_location = "/home/nvidia/" + set_dir + "/" + name_type + "_" + string_num + ".bmp";
+            string save_location = "/home/nvidia/" + set_dir + "/" + name_type + "_" + string_num + ".jpg";
 
             cout << "Save location: " << save_location << endl;
 
