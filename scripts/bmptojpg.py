@@ -2,6 +2,7 @@
 
 import glob
 import sys
+import cv2
 
 if __name__ == "__main__":
 	print(sys.argv);
@@ -12,3 +13,4 @@ if __name__ == "__main__":
 
 	for f in filelist:
 		print(f)
+	print(cv2.__version__)
