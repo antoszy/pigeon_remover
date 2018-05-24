@@ -26,7 +26,7 @@ int main() {
     // Options
     int WIDTH = 500;
     int HEIGHT = 500;
-    int FPS = 1;
+    int FPS = 10;
 
     // Directory name
     string set_dir = "Test";
