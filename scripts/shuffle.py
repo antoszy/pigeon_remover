@@ -11,9 +11,7 @@ if __name__ == "__main__":
     else:
         filelist = glob.glob(sys.argv[1]+ "/*.jpg")
     
-    filelist = random.shuffle(b)
-
-    print(filelist)
+    filelist = random.shuffle(filelist)
 
     for f in filelist:
         print(f) 
