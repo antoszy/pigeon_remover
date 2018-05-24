@@ -1,16 +1,18 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import glob
 import sys
 import cv2
+import os
 
 if __name__ == "__main__":
-	print(sys.argv);
-	if len(sys.argv)<2:
-		filelist = glob.glob("./*")
-	else:
-		filelist = glob.glob(sys.argv[1])
+    if len(sys.argv)<2:
+        filelist = glob.glob("./*.bmp")
+    else:
+        filelist = glob.glob(sys.argv[1]+ "/*.bmp")
 
-	for f in filelist:
-		print(f)
-	print(cv2.__version__)
+    for f in filelist:
+        img = cv2.imread( f, cv2.IMREAD_COLOR )
+        cv2.imwrite( f[:f.rfind(".")] + ".jpg", img)
+        os.remove(f)
+        
