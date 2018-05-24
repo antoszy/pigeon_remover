@@ -1,17 +1,19 @@
 #!/usr/bin/env python
-
 import glob
 import sys
 import os
 import random
 
 if __name__ == "__main__":
-    if len(sys.argv)<2:
-        filelist = glob.glob("./*.jpg")
-    else:
-        filelist = glob.glob(sys.argv[1]+ "/*.jpg")
+
+    if len(sys.argv)>1:
+        os.chdir(sys.argv[1])
     
-    filelist = random.shuffle(filelist)
+    filelist = glob.glob("*.jpg")
+   
+    random.shuffle(filelist)
+    number = 0
 
     for f in filelist:
-        print(f) 
+        os.rename( f, str(number).zfill(5) + ".jpg")
+        number = number + 1
